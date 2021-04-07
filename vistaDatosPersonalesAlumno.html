@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="css/vistaDatosPersonalesAlumno.css" type="text/css" rel="stylesheet">
+    <title>Datos personales</title>
+</head>
+
+<body>
+    <!--inicio del titular-->
+    <nav class="navbar navbar-light ">
+        <div class="container-fluid text-center">
+            <div class="container-md">
+                <a class="navbar-brand" href="#">
+                    <div class="logo">
+                    </div>
+                    <div class="titular">
+                        <p class="nav navbar-nav navbar-center text-center mx-auto mb-2">
+                            <h3 id="encabezado">Sistema Institucional De Tutorías-UNPA</h3>
+                        </p>
+                        <p class="nav navbar-nav navbar-center text-center mx-auto mb-2">
+                            <h3 id="mensajeFecha">Fecha límite para solicitar Tutor: <strong id="fechaSolicitudTutor">22/06/2021</strong> </h3>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+    <!--fin del titular-->
+
+    <!--inicio del menu-->
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-success">
+            <a class="navbar-brand" href="">Menú</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Tu informacion
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="">Datos personales</a></li>
+                            <li><a class="dropdown-item" href="#">Datos de acceso al sistema</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Solicitar tutor
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="">Ver profesores disponibles</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Salir
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="index.jsp">Regresar</a></li>
+                            <li><a class="dropdown-item" href="index.jsp">Salir</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--fin del menu-->
+
+
+    <!--inicio del card para el formulario-->
+    <div class="container">
+        <div class="card bg-light mb-3  mx-auto" style="max-width: 80rem;">
+            <div class="card-header text-center">Datos personales</div>
+            <div class="card-body">
+                <!--inicio del formulario de datos-->
+                <form class="row g-3">
+                    <div class="col-md-3">
+                        <label for="validationDefault01" class="form-label">Matrícula:</label>
+                        <input type="text" class="form-control" disabled="" id="validationDefault01" value="20162021" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="NombreAlumno" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Apellido paterno:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="ApPaterno" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Apellido materno:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="ApMaterno" required>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="validationDefault04" class="form-label">Carrera:</label>
+                        <select class="form-select" id="validationDefault04" required>
+                        <option class="form-select" value="">Ingeniería en Computación</option>
+                        <option>Ingeniería en Mecatrónica</option>
+                        <option>Ingeniería en Diseño</option>
+                        <option>Ingeniería en Agrícola Trópical</option>
+                        <option>Ingeniería en Acuicultura</option>
+                        <option>Licenciantura en Matemáticas Aplicadas</option>
+                        <option>Licenciantura en Zootecnia</option>
+                      </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault04" class="form-label">Semestre:</label>
+                        <select class="form-select" id="validationDefault04" required>
+                        <option class="form-select"  value="">Primer Semestre</option>
+                        <option>Segundo semestre</option>
+                        <option>Tercer semestre</option>
+                        <option>Cuarto semestre</option>
+                        <option>Quinto semestre</option>
+                        <option>Sexto semestre</option>
+                        <option>Séptimo semestre</option>
+                        <option>Octavo semestre</option>
+                        <option>Noveno semestre</option>
+                        <option>Décimo semestre</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Correo electrónico:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="corrreo.tal@gmail.com" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Teléfono:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="5540253689" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="start" class="form-label">Fecha de nacimiento:</label>
+                        <input type="date" class="form-control" id="start" name="trip-start" value="2021-04-05">
+                    </div>
+
+
+                    <div class="card-header text-center">Dirección</div>
+                    <div class="col-md-3">
+                        <label for="validationDefault01" class="form-label">Calle:</label>
+                        <input type="text" class="form-control" id="validationDefault01" value="conocido" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Colonia:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="conocido" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Ciudad:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="conocido" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Código postal:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="68400" required>
+                    </div>
+                    <div class="form-group" id="botonActualizar" class="text-center">
+                        <input type="submit" name="submit" class="btn btn-success d-grid gap-2 col-6 mx-auto" value="Actualizar datos">
+                    </div>
+
+                </form>
+
+                <!--fin del formulario de datos -->
+            </div>
+        </div>
+    </div>
+    <!--fin del card para el formulario-->
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
