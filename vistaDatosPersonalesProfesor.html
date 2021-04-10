@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="css/vistaDatosPersonalesProfesor.css" type="text/css" rel="stylesheet">
+    <title>Datos personales-Profesor(a)</title>
+</head>
+
+<body>
+    <!--inicio del titular-->
+    <nav class="navbar navbar-light ">
+        <div class="container-fluid text-center">
+            <div class="container-md">
+                <a class="navbar-brand" href="#">
+                    <div class="logo">
+                    </div>
+                    <div class="titular">
+                        <p class="nav navbar-nav navbar-center text-center mx-auto mb-2">
+                            <h3 id="encabezado">Sistema Institucional De Tutorías-UNPA</h3>
+                        </p>
+                        <p class="nav navbar-nav navbar-center text-center mx-auto mb-2">
+                            <h3 id="mensajeFecha">Fecha límite para generar el reporte semestral: <strong id="fechaReporteSemestral">22/06/2021</strong> </h3>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+    <!--fin del titular-->
+
+    <!--inicio del menu-->
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-success">
+            <a class="navbar-brand" href="">Menú</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Tu informacion
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="">Datos personales</a></li>
+                            <li><a class="dropdown-item" href="#">Datos de acceso al sistema</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Gestionar tutorados
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="">Solicitudes</a></li>
+                            <li><a class="dropdown-item" href="#">Tus tutorados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Reportes
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="">Generar reporte semestral</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Salir
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Regresar</a></li>
+                            <li><a class="dropdown-item" href="index.jsp">Salir</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--fin del menu-->
+
+    <!--inicio del card para el formulario-->
+    <div class="container">
+        <div class="card bg-light mb-3  mx-auto" style="max-width: 80rem;">
+            <div class="card-header text-center">Datos personales</div>
+            <div class="card-body">
+                <!--inicio del formulario de datos-->
+                <form class="row g-3">
+                    <div class="col-md-3">
+                        <label for="validationDefault01" class="form-label">Numero de empleado:</label>
+                        <input type="text" class="form-control" disabled="" id="validationDefault01" value="1254895" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="NombreProfesor" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Apellido paterno:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="ApPaterno" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Apellido materno:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="ApMaterno" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="validationDefault02" class="form-label">Número de tutorados:</label>
+                        <input type="text" class="form-control" id="validationDefault02" disabled value="2" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Correo electrónico:</label>
+                        <input type="email" class="form-control" id="validationDefault02" value="corrreo.tal@gmail.com" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Edificio:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="Profesores Investigadores" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="start" class="form-label">Cubículo:</label>
+                        <input type="text" class="form-control" id="start" name="trip-start" value="12">
+                    </div>
+                    <div class="card-header text-center">Dirección</div>
+                    <div class="col-md-3">
+                        <label for="validationDefault01" class="form-label">Calle:</label>
+                        <input type="text" class="form-control" id="validationDefault01" value="Av. Principal" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Colonia:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="Ciudad Universitaria" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Ciudad:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="Loma Bonita, Oax." required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="validationDefault02" class="form-label">Código postal:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="68400" required>
+                    </div>
+                    <div class="card-header text-center">Perfil</div>
+                    <div class="row g-2">
+                        <div class="col-md">
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Perfil profesional:</label>
+                                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="4">Lic o Ing. en ... el cual estudie en, Maestría en .... la cual estudie en tal institución con un Doctorado en .... que estudie y la obtuve en tal instución.
+Actualmente mi linea de investigación o de interés es...</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Perfil personal:</label>
+                                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="4">Mi pasa tiempo favorito es desarrollar software o programar aplicaciones que, además de buscar un nicho de oportunidad en cuanto al desarrollo e Ingeniería de software se refiere.</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Filosofía:</label>
+                                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="4">#NuncaParesDeAprender</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="botonActualizar" class="text-center">
+                            <input type="submit" name="submit" class="btn btn-success d-grid gap-2 col-6 mx-auto" value="Actualizar datos">
+                        </div>
+
+                </form>
+
+                <!--fin del formulario de datos -->
+                </div>
+            </div>
+        </div>
+        <!--fin del card para el formulario-->
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
