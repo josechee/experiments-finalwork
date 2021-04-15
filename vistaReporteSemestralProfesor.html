@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="css/vistaReporteSemestralProfesor.css" type="text/css" rel="stylesheet">
+    <link href="js/reporteSemestral.js" type="text/javascript">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <title>Reporte semestral</title>
+</head>
+
+<body>
+    <!--inicio del titular-->
+    <nav class="navbar navbar-light ">
+        <div class="container-fluid text-center">
+            <div class="container-md">
+                <a class="navbar-brand" href="#">
+                    <div class="logo">
+                    </div>
+                    <div class="titular">
+                        <p class="nav navbar-nav navbar-center text-center mx-auto mb-2">
+                            <h3 id="encabezado">Sistema Institucional De Tutorías-UNPA</h3>
+                        </p>
+                        <p class="nav navbar-nav navbar-center text-center mx-auto mb-2">
+                            <h3 id="mensajeFecha">Fecha límite para generar el reporte semestral: <strong id="fechaReporteSemestral">22/06/2021</strong> </h3>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </nav>
+    <!--fin del titular-->
+
+    <!--inicio del menu-->
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-dark bg-success">
+            <a class="navbar-brand" href="">Menú</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Tu informacion
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="">Datos personales</a></li>
+                            <li><a class="dropdown-item" href="#">Datos de acceso al sistema</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Gestionar tutorados
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="">Solicitudes</a></li>
+                            <li><a class="dropdown-item" href="#">Tus tutorados</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Reportes
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="">Generar reporte semestral</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Salir
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Regresar</a></li>
+                            <li><a class="dropdown-item" href="index.jsp">Salir</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--fin del menu-->
+
+
+    <!--inicio del card para el formulario-->
+    <div class="container">
+        <div class="card bg-light mb-3  mx-auto" style="max-width: 50rem;">
+            <div class="card-header text-center"><b>Reporte semestral: </b>NombreProfesor ApPaterno ApMaterno</div>
+            <div class="card-body">
+                <!--inicio del formulario de datos-->
+                <form class="row g-3">
+                    <div class="col-md-4">
+                        <label for="validationDefault01" class="form-label">Numero de tutorados:</label>
+                        <input type="number" class="form-control" disabled="" id="validationDefault01" value="1" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Fecha del reporte:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="14 de Abril del 2021" disabled required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Ciclo escolar:</label>
+                        <input type="text" class="form-control" id="validationDefault02" value="2020-2021B" maxlength="10" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault02" class="form-label">Numero de tutorías:</label>
+                        <input type="text" class="form-control" placeholder="Cuantas tutorías atendió" id="validationDefault02" value="0" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="validationDefault04" class="form-label">Tutorados con problema:</label>
+                        <input type="text" class="form-control" placeholder="Cuantos tutorados" id="validationDefault04" value="2" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="validationCustom04" class="form-label">Tipo de problema:</label>
+                        <select class="form-select" id="validationCustom04" required>
+                            <option selected disabled value="">Selecciona una opcion</option>
+                            <option>Personal</option>
+                            <option>Académico</option>
+                            <option>Ninguno</option>
+                          </select>
+                        <div class="invalid-feedback">
+                            Por favor seleccione una opcion.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkboxConflcito">
+                            <label class="form-check-label" for="flexCheckDefault">
+                            Conflicto de brindar tutoría
+                        </label>
+                        </div>
+                    </div>
+                    <div class="col-md-12" id="descripcionConflcito">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Descripción del conflcito de atención:</label>
+                            <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="4">En caso de haber tenido algún inconveniente o conflicto para darle tutoría al alumno (a su tutorado) por favor agrega una pequeña descripción...</textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="checkboxAyuda">
+                            <label class="form-check-label" for="flexCheckDefault">
+                            Ayuda
+                        </label>
+                        </div>
+                    </div>
+                    <div class="col-md-12" id="descripcionAyuda">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Descripción de la ayuda:</label>
+                            <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="4">En dado caso de haber brindado algún tipo ayuda a tu tutorado o tutorados, por favor agrega una breve descripción de la ayuda que brindaste...</textarea>
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group" id="botonActualizar" class="text-center">
+                        <input type="submit" name="submit" class="btn btn-success d-grid gap-2 col-6 mx-auto" value="Enviar rerporte">
+                    </div>
+
+                </form>
+
+                <!--fin del formulario de datos -->
+            </div>
+        </div>
+    </div>
+    <!--fin del card para el formulario-->
+
+
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/reporteSemestral.js"></script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
+
+<!--De Bootstrap-->
+<script type="text/javascript">
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
