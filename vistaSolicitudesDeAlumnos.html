@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link href="css/vistaProfesoresDisponibles.css" type="text/css" rel="stylesheet">
-
-    <title>Profesores disponibles</title>
-
+    <link href="css/vistaSolicitudesDeAlumnos.css" type="text/css" rel="stylesheet">
+    <title>Solicitudes</title>
 </head>
 
 <body>
+
     <!--inicio del titular-->
     <nav class="navbar navbar-light ">
         <div class="container-fluid text-center">
@@ -26,7 +26,7 @@
                             <h3 id="encabezado">Sistema Institucional De Tutorías-UNPA</h3>
                         </p>
                         <p class="nav navbar-nav navbar-center text-center mx-auto mb-2">
-                            <h3 id="mensajeFecha">Fecha límite para solicitar Tutor: <strong id="fechaSolicitudTutor">22/06/2021</strong> </h3>
+                            <h3 id="mensajeFecha">Fecha límite para generar el reporte semestral: <strong id="fechaReporteSemestral">22/06/2021</strong> </h3>
                         </p>
                     </div>
                 </a>
@@ -36,14 +36,13 @@
     </nav>
     <!--fin del titular-->
 
-
     <!--inicio del menu-->
     <div class="container">
         <nav class="navbar navbar-expand-md navbar-dark bg-success">
             <a class="navbar-brand" href="">Menú</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
@@ -51,25 +50,35 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Tu informacion
-                </a>
+                            Tu informacion
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Datos personales</a></li>
+                            <li><a class="dropdown-item" href="">Datos personales</a></li>
                             <li><a class="dropdown-item" href="#">Datos de acceso al sistema</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Solicitar tutor
-                </a>
+                            Gestionar tutorados
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="">Ver profesores disponibles</a></li>
+                            <li><a class="dropdown-item" href="">Solicitudes</a></li>
+                            <li><a class="dropdown-item" href="#">Tus tutorados</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Salir
-                </a>
+                            Reportes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="">Generar reporte semestral</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Salir
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Regresar</a></li>
                             <li><a class="dropdown-item" href="#">Salir</a></li>
@@ -81,59 +90,61 @@
     </div>
     <!--fin del menu-->
 
-    <!--inicio de la lista de profesores (tabla)-->
+
+    <!--inicio de la lista de solicitudes de alumnos para ser tutorado (tabla)-->
     <table class="table table-striped table-hover">
         <thead>
             <tr>
-                <th scope="col">Nombre(s)</th>
+                <th scope="col">Fecha de solicitud</th>
+                <th scope="col">Nombre(s) del alumno</th>
                 <th scope="col">Apellido paterno</th>
                 <th scope="col">Apellido materno</th>
-                <th scope="col">Edificio</th>
-                <th scope="col">Cubículo</th>
+                <th scope="col">Carrera</th>
+                <th scope="col">Semestre</th>
                 <th scope="col">Correo electrónico</th>
-                <th scope="col">Tutorados</th>
-                <th scope="col">Solicitar tutor</th>
+                <th colspan="2" class="text-center">Acción de la solicitud</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th scope="row">Ariel</th>
-                <td>López</td>
-                <td>Rodríguez</td>
-                <td>Profesores Investigadores</td>
-                <td>8</td>
-                <td>mcariellopez@gmail.com</td>
-                <td>0</td>
-                <td><button class="btn btn-success d-grid gap-2">Enviar solicitud</button></td>
+                <td scope="row">02 de Mayo de 2021</td>
+                <td>Reyna Isabel</td>
+                <td>Pantoja</td>
+                <td>Guzmán</td>
+                <td>Ingeniería en Computación</td>
+                <td>Noveno</td>
+                <td>reyna@gmail.com</td>
+                <td><button class="btn btn-success d-grid gap-2">Aceptar</button></td>
+                <td><button class="btn btn-danger d-grid gap-2">Rechazar</button></td>
             </tr>
             <tr>
-                <th scope="row">José Domingo</th>
-                <td>Juarez</td>
-                <td>Hernández</td>
-                <td>Profesores Investigadores</td>
-                <td>15</td>
-                <td>jmingo@gmail.com</td>
-                <td>0</td>
-                <td><button class="btn btn-success d-grid gap-2">Enviar solicitud</button></td>
+                <td scope="row">01 de Mayo de 2021</td>
+                <td>Victoria</td>
+                <td>Pérez</td>
+                <td>Contreras</td>
+                <td>Ingeniería en Diseño</td>
+                <td>Noveno</td>
+                <td>victoria.1995@gmail.com</td>
+                <td><button class="btn btn-success d-grid gap-2">Aceptar</button></td>
+                <td><button class="btn btn-danger d-grid gap-2">Rechazar</button></td>
             </tr>
             <tr>
-                <th scope="row">Sandro Geovanny</th>
-                <td>Vazquez</td>
-                <td>Díaz</td>
-                <td>Profesores Investigadores</td>
-                <td>14</td>
-                <td>sgvazquezdiaz@gmail.com</td>
-                <td>0</td>
-                <td><button class="btn btn-success d-grid gap-2">Enviar solicitud</button></td>
+                <td scope="row">02 de Mayo de 2021</td>
+                <td>Osmani</td>
+                <td>Martinez</td>
+                <td>Castillo</td>
+                <td>Ingeniería en Computación</td>
+                <td>Séptimo</td>
+                <td>osmar.cast@gmail.com</td>
+                <td><button class="btn btn-success d-grid gap-2">Aceptar</button></td>
+                <td><button class="btn btn-danger d-grid gap-2">Rechazar</button></td>
             </tr>
         </tbody>
     </table>
-    <!--fin de la lista de profesores (tabla)-->
+    <!--fin de la lista de solicitudes de alumnos para ser tutorado (tabla)-->
 
 
 
-
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -144,7 +155,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
     -->
-
 </body>
 
 </html>
